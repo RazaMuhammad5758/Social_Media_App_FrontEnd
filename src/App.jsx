@@ -1,20 +1,75 @@
-import React from 'react'
-import Login from './pages/login/Login'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Register from './pages/register/Register'
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 
-const App = () => {
+
+
+import Profile from "./pages/profile/Profile";
+import LeftBar from "./components/leftBar/LeftBar";
+import RightBar from "./components/rightBar/RightBar";
+import Home from "./pages/home/Home";
+import NavBar from "./components/NavBar/NavBar";
+
+function App() {
+
+
+  const Layout = () => {
+    return (
+      <div>
+        <NavBar />
+        <div style={{ display: "flex" }}>
+          <LeftBar />
+          <div>
+            <Outlet />
+          </div>
+          <RightBar />
+        </div>
+      </div>
+    );
+  };
+
+  
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        
+          <Layout />
+      
+      ),
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/profile/:id",
+          element: <Profile />,
+        },
+      ],
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+  ]);
+
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;
