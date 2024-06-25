@@ -8,8 +8,6 @@ import {
   Navigate,
 } from "react-router-dom";
 
-
-
 import Profile from "./pages/profile/Profile";
 import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
@@ -18,6 +16,7 @@ import NavBar from "./components/NavBar/NavBar";
 
 function App() {
 
+  const currentUser = false; // Change this to 'true' to simulate a logged-in user
 
   const Layout = () => {
     return (
@@ -25,7 +24,7 @@ function App() {
         <NavBar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <div>
+          <div style={{ flex: 1 }}>
             <Outlet />
           </div>
           <RightBar />
@@ -39,22 +38,20 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        
-          <Layout />
-      
-      ),
-      children: [
+      element:<Layout />,
+      children:[
         {
           path: "/",
-          element: <Home />,
-        },
-        {
+          element:<Home />,
+        }
+        ,{
           path: "/profile/:id",
-          element: <Profile />,
-        },
-      ],
+          element:<Profile />,
+        }
+      ]
     },
+
+    
     {
       path: "/login",
       element: <Login />,
