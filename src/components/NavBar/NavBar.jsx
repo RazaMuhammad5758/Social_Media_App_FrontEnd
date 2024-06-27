@@ -11,14 +11,30 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
-    <div>
+    <div className='navbar'>
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>Friend Book</span>
         </Link>
+          <HomeOutlinedIcon />
+          <DarkModeOutlinedIcon />
+          <GridViewOutlinedIcon />
+          <div className="search">
+            <SearchOutlinedIcon />
+            <input type="text" placeholder="Search..." />
+          </div>
       </div>
       <div className="right">
-
+        <PersonOutlinedIcon />
+        <EmailOutlinedIcon />
+        <NotificationsOutlinedIcon />
+        <div className="user">
+          <img
+            // src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            alt=""
+          />
+          <span>John</span>
+        </div>
       </div>
     </div>
   )

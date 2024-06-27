@@ -16,7 +16,7 @@ import NavBar from "./components/NavBar/NavBar";
 
 function App() {
 
-  const currentUser = false; // Change this to 'true' to simulate a logged-in user
+  const currentUser = true; // Change this to 'true' to simulate a logged-in user
 
   const Layout = () => {
     return (
@@ -33,12 +33,18 @@ function App() {
     );
   };
 
-  
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children;
+  };
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element:<Layout />,
+      element:<ProtectedRoute><Layout /></ProtectedRoute>,
       children:[
         {
           path: "/",
