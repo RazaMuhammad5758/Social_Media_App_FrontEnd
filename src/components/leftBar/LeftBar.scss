@@ -1,40 +1,78 @@
 .leftBar{
-    flex: 1;
-    border-right: 0.5px solid rgb(230, 227, 227);
+    flex: 2;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 50px);
     overflow-y: scroll;
+    // border-radius: 10px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
     background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .container{
         padding: 20px;
 
+        hr{
+            margin: 20px 0px;
+            border: none;
+            height: 0.5px;
+            background-color: lightgray;
+
+        }
+
 
         .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
 
+
+            span{
+                font-size: 12px;
+            }
 
             .user{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                margin-bottom: 10px;
+
 
                 img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
                     
 
                 }
 
                 span{
 
-
+                    font-weight: bold;
+                    font-size: 14px;
                 }
 
 
             }
             .item{
 
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
                 img{
-
-
+                    width: 20px;
+                    cursor: pointer;
                 }
 
                 span{
-
-
+                    cursor: pointer;
+                    font-size: 14px;
                 }
             }
 

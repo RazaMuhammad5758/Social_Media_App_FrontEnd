@@ -1,6 +1,8 @@
-import React from 'react'
-import './LeftBar.scss'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './LeftBar.scss';
+import { Link } from 'react-router-dom';
+
+// Importing assets
 import Friends from "../../assets/1.png";
 import Groups from "../../assets/2.png";
 import Market from "../../assets/3.png";
@@ -16,41 +18,71 @@ import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 
 const LeftBar = () => {
+  // Content items array for mapping
+  const contentItems1 = [
+    { src: Friends, label: 'Friends' },
+    { src: Groups, label: 'Groups' },
+    { src: Market, label: 'Marketplace' },
+    { src: Watch, label: 'Watch' },
+    { src: Memories, label: 'Memories' },
+  ];
+
+  const contentItems3 = [
+    { src: Tutorials, label: 'Tutorials' },
+    { src: Courses, label: 'Courses' },
+    { src: Fund, label: 'Fund' },
+  ];
+  const contentItems2 = [
+    { src: Events, label: 'Events' },
+    { src: Gaming, label: 'Gaming' },
+    { src: Gallery, label: 'Gallery' },
+    { src: Videos, label: 'Videos' },
+    { src: Messages, label: 'Messages' },
+  ];
+
   return (
     <div className='leftBar'>
       <div className="container">
         <div className="menu">
-          <Link to ="/" style={{textDecoration:"none"}}><div className="user">
-            {/* <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> */}
-            <span>John</span>
-          </div></Link>
-          <div className="item">
-            <img src={Friends} alt="" />
-            <span>Friends</span>
-          </div>
-          <div className="item">
-            <img src={Groups} alt="" />
-            <span>Groups</span>
-          </div>
-          <div className="item">
-            <img src={Market} alt="" />
-            <span>Marketplace</span>
-          </div>
-          <div className="item">
-            <img src={Watch} alt="" />
-            <span>Watch</span>
-          </div>
-          <div className="item">
-            <img src={Memories} alt="" />
-            <span>Memories</span>
-          </div>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="user">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="User" />
+              <span>John</span>
+            </div>
+          </Link>
+
+          {contentItems1.map((item, index) => (
+            <div className="item" key={index}>
+              <img src={item.src} alt={item.label} />
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+        
+        <hr />
+        
+        <div className="menu">
+          <span>Your shortcuts</span>
+          {contentItems2.map((item, index) => (
+            <div className="item" key={index}>
+              <img src={item.src} alt={item.label} />
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+        <hr />
+        <div className="menu">
+          <span>Others</span>
+          {contentItems3.map((item, index) => (
+            <div className="item" key={index}>
+              <img src={item.src} alt={item.label} />
+              <span>{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
-
-      
-      
     </div>
-  )
+  );
 }
 
-export default LeftBar
+export default LeftBar;
