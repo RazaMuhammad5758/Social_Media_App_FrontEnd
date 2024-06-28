@@ -1,4 +1,7 @@
+@import '../../style.scss';
+
 .navbar{
+    @include themify($themes){
     display: flex;
     align-items: center;    
     justify-content: space-between;
@@ -8,7 +11,9 @@
     position: sticky;
     top: 0;
     // z-index: 999;
-    background: #fff;
+    background: themed('bg');
+    color: themed('textColor');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .left{
         display: flex;
@@ -20,7 +25,7 @@
 
             font-size: 25px;
             font-weight: bold;
-            color: darkblue;
+            color: themed('logo');
 
         }
         .search{
@@ -34,6 +39,8 @@
                 padding: 10px;
                 border: none;
                 border-bottom: 1px solid gray;
+                background-color: transparent;
+                color: themed('textColor');
                 
                 &:focus{
                     outline: none;
@@ -77,4 +84,6 @@
             }
         }
     }
+}
+
 }

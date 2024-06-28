@@ -37,7 +37,7 @@ const RightBar = () => {
                 <span>John</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span className='time'>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -46,7 +46,7 @@ const RightBar = () => {
                 <span>John</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span className='time'>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -55,7 +55,7 @@ const RightBar = () => {
                 <span>John</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span className='time'>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -64,7 +64,45 @@ const RightBar = () => {
                 <span>John</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span className='time'>1 min ago</span>
+          </div>
+        </div>
+        <div className="item">
+          <span>Online Friends</span>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
+              <div className="online" />
+              <span>John</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <div className="online" />
+              <span>John</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <div className="online" />
+              <span>John</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <div className="online" />
+              <span>John</span>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <div className="online" />
+              <span>John</span>
+            </div>
           </div>
         </div>
       </div>
