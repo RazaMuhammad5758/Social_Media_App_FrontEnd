@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './LeftBar.scss';
 import { Link } from 'react-router-dom';
 
@@ -16,8 +16,11 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
+import { AuthContext } from '../../context/authContext';
 
 const LeftBar = () => {
+
+  const {currentUser} = useContext(AuthContext);
   // Content items array for mapping
   const contentItems1 = [
     { src: Friends, label: 'Friends' },
@@ -46,8 +49,8 @@ const LeftBar = () => {
         <div className="menu">
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="user">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="User" />
-              <span>John</span>
+              <img src={currentUser.profilePic} alt="User" />
+              <span>{currentUser.name}</span>
             </div>
           </Link>
 

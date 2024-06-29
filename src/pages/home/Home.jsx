@@ -1,34 +1,12 @@
+import Stories from '../../stories/Stories'
+import Posts from '../../posts/Post'
 import './Home.scss'
 
 const Home = () => {
   return (
     <div className="home">
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
-      <h1>Home</h1>
+      <Stories />
+      <Posts/>
     </div>
   )
 }
