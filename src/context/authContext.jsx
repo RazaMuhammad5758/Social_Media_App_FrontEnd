@@ -1,10 +1,10 @@
-import { createContext, useEffect } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
-export const DarkModeContext = createContext()
+export const AuthContext = createContext()
 
-export const DarkModeContextProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
 
-    const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') || 'false')
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('darkMode')) || 'false')
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode)
