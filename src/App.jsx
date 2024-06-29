@@ -16,10 +16,11 @@ import Home from "./pages/home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/authContext";
 
 function App() {
 
-  const currentUser = true; // Change this to 'true' to simulate a logged-in user
+  const {currentUser} = useContext(AuthContext); // Change this to 'true' to simulate a logged-in user
 
   const {darkMode} = useContext(DarkModeContext)
   // console.log(darkMode)
