@@ -10,9 +10,11 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from 'react-router-dom';
 import { DarkModeContext } from '../../context/darkModeContext';
+import { AuthContext } from '../../context/authContext';
 
 const NavBar = () => {
   const {toggleDarkMode, darkMode} = useContext(DarkModeContext)
+  const {currentUser} = useContext(AuthContext)
 
 
   return (
@@ -38,7 +40,7 @@ const NavBar = () => {
             src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
             alt=""
           />
-          <span>John</span>
+          <span>{currentUser}</span>
         </div>
       </div>
     </div>

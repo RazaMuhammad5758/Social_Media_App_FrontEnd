@@ -20,7 +20,7 @@ import { AuthContext } from "./context/authContext";
 
 function App() {
 
-  const {currentUser} = useContext(AuthContext); // Change this to 'true' to simulate a logged-in user
+  const {currentUser} = useContext(AuthContext);
 
   const {darkMode} = useContext(DarkModeContext)
   // console.log(darkMode)

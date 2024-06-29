@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom"
 import "./Login.scss"
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 const Login = () => {
+
+  const {currentUser} = useContext(AuthContext);
   return (
     <div className="login">
       <div className="card">
