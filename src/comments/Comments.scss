@@ -1,0 +1,22 @@
+.comments{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    
+    .comment{
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        .info{
+            display: flex;
+            flex-direction: column;
+            .date{
+                font-size: 12px;
+                color: #999;
+                margin-top: 5px;
+            }
+        }
+    }
+}
