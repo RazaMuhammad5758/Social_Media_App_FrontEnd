@@ -1,22 +1,36 @@
-.comments{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+@import "../style.scss";
 
-    
+.comments{
+@include themify ($themes){
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
     .comment{
         display: flex;
+        margin: 10px 0;
         gap: 10px;
-        margin: 20px 0;
+        justify-content: space-between;
+
         .info{
             display: flex;
             flex-direction: column;
+            gap: 3px;
+            align-items: flex-start;
+            span{
+                font-weight: 500;
+            }
+            p{
+                color: themed("textColorSoft");
+            }
             .date{
                 font-size: 12px;
-                color: #999;
-                margin-top: 5px;
+                color: themed("textColorSoft");
             }
         }
     }
+}
 }
