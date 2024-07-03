@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SubPost.scss'
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom';
 import Comments from '../comments/Comments';
 
 const SubPost = ({post}) => {
+
+
+  const [CommentOpen, setCommentOpen] = useState(false);
 
   const liked = false;
   return (
@@ -38,7 +41,7 @@ const SubPost = ({post}) => {
             {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
             123 likes
           </div>
-          <div className="item">
+          <div className="item" onClick={() => setCommentOpen(!CommentOpen)}>
             <TextsmsOutlinedIcon />
             123 comments
           </div>
@@ -47,7 +50,7 @@ const SubPost = ({post}) => {
             123 shares
           </div>
         </div>
-        <Comments/>
+        {CommentOpen && <Comments/>}
       </div>
     </div>
   )
