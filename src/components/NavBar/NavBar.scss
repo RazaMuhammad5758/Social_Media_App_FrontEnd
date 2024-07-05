@@ -45,6 +45,9 @@
                 @include mobile{
                     display: none;
                 }
+                @include tablet{
+                    width: 200px;
+                }
                 
                 &:focus{
                     outline: none;
@@ -68,6 +71,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
+
+            @include tablet{
+                display: none;
+            }   
 
             img{
 
