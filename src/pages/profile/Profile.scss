@@ -85,21 +85,21 @@
             font-weight: 500;
           }
 
-          .info {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            .info {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
 
-            .item {
-              display: flex;
-            //   align-items: center;
-              gap: 5px;
-              color: themed("textColorSoft");
+                .item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: themed("textColorSoft");
 
-              span {
-                font-size: 12px;
-              }
+                span {
+                    font-size: 12px;
+                }
             }
           }
           button {

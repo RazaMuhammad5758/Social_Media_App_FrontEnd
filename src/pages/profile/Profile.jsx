@@ -35,7 +35,7 @@ const Profile = () => {
               <PinterestIcon fontSize="large" />
             </a>
           </div>
-          <div className="centre">
+          <div className="center">
             <span>Jahn Doe</span>
             <div className="info">
               <div className="item">
