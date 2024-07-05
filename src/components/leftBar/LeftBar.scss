@@ -9,6 +9,11 @@
     overflow-y: scroll;
     color: themed('textColor');
     // border-radius: 10px;
+    
+    @include mobile{
+        display: none;
+    }
+
     &::-webkit-scrollbar{
         display: none;
     }

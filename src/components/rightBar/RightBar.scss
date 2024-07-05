@@ -8,6 +8,9 @@
     height: calc(100vh - 50px);
     overflow-y: scroll;
     // border-radius: 10px;
+    @include mobile{
+        display: none;
+    }
     &::-webkit-scrollbar{
         display: none;
     }
