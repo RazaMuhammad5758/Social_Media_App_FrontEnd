@@ -9,8 +9,8 @@ const RightBar = () => {
           <span>Suggestions For You</span>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
-              <span>John</span>
+              <img src="https://en.dailypakistan.com.pk/digital_images/extra-large/2023-08-08/imran-khan-biography-1691505311-9489.jpg" alt="" />
+              <span>Imran Khan</span>
             </div>
             <div className="buttons">
               <button style={{ background: "skyblue", color: "white", borderColor: "skyblue", borderRadius: "2px", cursor: "pointer" }}>follow</button>
@@ -19,8 +19,8 @@ const RightBar = () => {
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
-              <span>John</span>
+              <img src="https://images.pexels.com/photos/4069289/pexels-photo-4069289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <span>Najeeb Khan</span>
             </div>
             <div className="buttons">
               <button style={{ background: "skyblue", color: "white", borderColor: "skyblue", borderRadius: "2px", cursor: "pointer" }}>follow</button>
@@ -32,76 +32,76 @@ const RightBar = () => {
           <span>Latest Activities</span>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
+              <img src="https://images.pexels.com/photos/3769706/pexels-photo-3769706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               <p>
-                <span>John</span> changed their cover picture
+                <span>Kareem</span> changed their cover picture
+              </p>
+            </div>
+            <span className='time'>13 min ago</span>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img src="https://images.pexels.com/photos/4067766/pexels-photo-4067766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <p>
+                <span>Arsal</span> changed their cover picture
               </p>
             </div>
             <span className='time'>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
+              <img src="https://images.pexels.com/photos/4101188/pexels-photo-4101188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               <p>
-                <span>John</span> changed their cover picture
+                <span>Abraham</span> changed their cover picture
               </p>
             </div>
-            <span className='time'>1 min ago</span>
+            <span className='time'>2 hrs ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
+              <img src="https://images.pexels.com/photos/921284/pexels-photo-921284.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               <p>
-                <span>John</span> changed their cover picture
+                <span>Eman</span> changed their cover picture
               </p>
             </div>
-            <span className='time'>1 min ago</span>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
-              <p>
-                <span>John</span> changed their cover picture
-              </p>
-            </div>
-            <span className='time'>1 min ago</span>
+            <span className='time'>15 min ago</span>
           </div>
         </div>
         <div className="item">
           <span>Online Friends</span>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
+              <img src="https://images.pexels.com/photos/4069289/pexels-photo-4069289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               <div className="online" />
-              <span>John</span>
+              <span>Najeeb</span>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <img src="https://images.pexels.com/photos/246805/pexels-photo-246805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /> 
               <div className="online" />
-              <span>John</span>
+              <span>Hammad</span>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <img src="https://images.pexels.com/photos/6256894/pexels-photo-6256894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /> 
               <div className="online" />
-              <span>John</span>
+              <span>Eshaq</span>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <img src="https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /> 
               <div className="online" />
-              <span>John</span>
+              <span>Ahmed</span>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" /> 
+              <img src="https://images.pexels.com/photos/5026987/pexels-photo-5026987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /> 
               <div className="online" />
-              <span>John</span>
+              <span>Rahim</span>
             </div>
           </div>
         </div>

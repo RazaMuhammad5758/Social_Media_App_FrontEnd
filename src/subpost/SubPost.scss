@@ -78,7 +78,17 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
+                #like{
+                    color: red;
+                }
+                #share{
+                    color: rgb(30, 139, 182);
+                    font-size: 22px;
+                }
 
+                p{
+                    color: themed("textColor");
+                }
                 .item {
                 display: flex;
                 align-items: center;

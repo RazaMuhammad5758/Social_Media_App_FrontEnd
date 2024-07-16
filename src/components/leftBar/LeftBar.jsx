@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './LeftBar.scss';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/authContext';
 
 // Importing assets
 import Friends from "../../assets/1.png";
@@ -16,12 +17,13 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
-import { AuthContext } from '../../context/authContext';
 
 const LeftBar = () => {
+  const { currentUser } = useContext(AuthContext);
 
-  const {currentUser} = useContext(AuthContext);
-  // Content items array for mapping
+  // Ensure currentUser is available before accessing properties
+  if (!currentUser) return null;
+
   const contentItems1 = [
     { src: Friends, label: 'Friends' },
     { src: Groups, label: 'Groups' },
@@ -30,17 +32,18 @@ const LeftBar = () => {
     { src: Memories, label: 'Memories' },
   ];
 
-  const contentItems3 = [
-    { src: Tutorials, label: 'Tutorials' },
-    { src: Courses, label: 'Courses' },
-    { src: Fund, label: 'Fund' },
-  ];
   const contentItems2 = [
     { src: Events, label: 'Events' },
     { src: Gaming, label: 'Gaming' },
     { src: Gallery, label: 'Gallery' },
     { src: Videos, label: 'Videos' },
     { src: Messages, label: 'Messages' },
+  ];
+
+  const contentItems3 = [
+    { src: Tutorials, label: 'Tutorials' },
+    { src: Courses, label: 'Courses' },
+    { src: Fund, label: 'Fund' },
   ];
 
   return (
@@ -53,7 +56,6 @@ const LeftBar = () => {
               <span>{currentUser.name}</span>
             </div>
           </Link>
-
           {contentItems1.map((item, index) => (
             <div className="item" key={index}>
               <img src={item.src} alt={item.label} />
@@ -61,9 +63,7 @@ const LeftBar = () => {
             </div>
           ))}
         </div>
-        
         <hr />
-        
         <div className="menu">
           <span>Your shortcuts</span>
           {contentItems2.map((item, index) => (
