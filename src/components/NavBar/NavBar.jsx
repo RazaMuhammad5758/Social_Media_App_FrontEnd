@@ -25,9 +25,9 @@ const NavBar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>Friend Book</span>
         </Link>
-          <HomeOutlinedIcon />
-          {darkMode ? <WbSunnyOutlinedIcon onClick={toggleDarkMode} /> : <DarkModeOutlinedIcon onClick={toggleDarkMode} />}
-          <GridViewOutlinedIcon />
+        <div className='nav_icons'> <HomeOutlinedIcon /> </div>
+         <div className='nav_icons'> {darkMode ? <WbSunnyOutlinedIcon onClick={toggleDarkMode} /> : <DarkModeOutlinedIcon onClick={toggleDarkMode} />} </div>
+         <div className='nav_icons'> <GridViewOutlinedIcon /> </div>
           <div className="search">
             <SearchOutlinedIcon />
             <input type="text" placeholder="Search..." />

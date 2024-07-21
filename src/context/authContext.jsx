@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
     const login = () => {
         const user = {
             id: 1,
-            name: 'John Doe',
+            name: 'Raza',
             profilePic: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
         };
         setCurrentUser(user);
