@@ -5,6 +5,19 @@ import { AuthContext } from "../../context/authContext";
 
 const Login = () => {
 
+  const [inputs, setInputs] = useState({
+    username: "",
+    email: "",
+    password: "",
+    name: "",
+  });
+  const [err, setErr] = useState(null);
+
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+
   const {login} = useContext(AuthContext);
 
   const handleLogin = ()=>{
