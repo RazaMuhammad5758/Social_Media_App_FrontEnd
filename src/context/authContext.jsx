@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import axios from 'axios'; // Ensure axios is imported
 
 export const AuthContext = createContext();
 
@@ -8,11 +9,14 @@ export const AuthContextProvider = ({ children }) => {
     );
 
     const login = async (inputs) => {
-        const res = axios.post("http://localhost:8800/api/auth/login", inputs, {
-            withCredentials:true,
-        });
-        setCurrentUser(res.data)
-        
+        try {
+            const res = await axios.post("http://localhost:8800/api/auth/login", inputs, {
+                withCredentials: true,
+            });
+            setCurrentUser(res.data);
+        } catch (error) {
+            throw error; // Re-throw the error to handle it in the Login component
+        }
     };
 
     useEffect(() => {

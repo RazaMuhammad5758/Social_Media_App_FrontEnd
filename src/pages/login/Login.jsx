@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Login.scss"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 
 const Login = () => {
@@ -19,7 +19,8 @@ const Login = () => {
 
   const {login} = useContext(AuthContext);
 
-  const handleLogin = async ()=>{
+  const handleLogin = async (e)=>{
+    e.preventDefault
     try{
       await login(inputs)
     }
@@ -40,7 +41,9 @@ const Login = () => {
             <h1>Login</h1>
             <form>
                 <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name="password" onChange={handleChange}/>
+
+                {err && err}
                 <button onClick={handleLogin}>Login</button>
             </form>
         </div>
