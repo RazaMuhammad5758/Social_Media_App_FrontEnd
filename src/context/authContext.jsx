@@ -7,14 +7,12 @@ export const AuthContextProvider = ({ children }) => {
         JSON.parse(localStorage.getItem('user')) || null
     );
 
-    const login = () => {
-        const user = {
-            id: 1,
-            name: 'Raza',
-            profilePic: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        };
-        setCurrentUser(user);
-        localStorage.setItem('user', JSON.stringify(user));  // Save user in local storage upon login
+    const login = async (inputs) => {
+        const res = axios.post("http://localhost:8800/api/auth/login", inputs, {
+            withCredentials:true,
+        });
+        setCurrentUser(res.data)
+        
     };
 
     useEffect(() => {
