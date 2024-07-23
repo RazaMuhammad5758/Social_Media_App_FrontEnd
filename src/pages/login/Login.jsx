@@ -19,8 +19,13 @@ const Login = () => {
 
   const {login} = useContext(AuthContext);
 
-  const handleLogin = ()=>{
-    login()
+  const handleLogin = async ()=>{
+    try{
+      await login(inputs)
+    }
+    catch{
+      setErr(err.response.data)
+    }
   }
   return (
     <div className="login">
