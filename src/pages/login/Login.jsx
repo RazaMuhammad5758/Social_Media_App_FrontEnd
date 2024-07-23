@@ -39,7 +39,7 @@ const Login = () => {
         <div className="right">
             <h1>Login</h1>
             <form>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
                 <input type="password" placeholder="Password" />
                 <button onClick={handleLogin}>Login</button>
             </form>
