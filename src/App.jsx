@@ -17,6 +17,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 function App() {
 
@@ -25,18 +26,23 @@ function App() {
   const {darkMode} = useContext(DarkModeContext)
   // console.log(darkMode)
 
+  const queryClient = new QueryClient()
+
   const Layout = () => {
     return (
-      <div className={`theme-${darkMode ? "dark" : "light"}`}>
-        <NavBar />
-        <div style={{ display: "flex" }}>
-          <LeftBar />
-          <div style={{ flex: 6 }}>
-            <Outlet />
+
+      <QueryClientProvider client={queryClient}>
+          <div className={`theme-${darkMode ? "dark" : "light"}`}>
+            <NavBar />
+            <div style={{ display: "flex" }}>
+              <LeftBar />
+              <div style={{ flex: 6 }}>
+                <Outlet />
+              </div>
+              <RightBar />
+            </div>
           </div>
-          <RightBar />
-        </div>
-      </div>
+        </QueryClientProvider>
     );
   };
 
